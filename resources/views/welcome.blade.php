@@ -81,7 +81,7 @@
           <img src="/images/advices-card.jpg" class="card-img-top" alt="image for advices card">
           <div class="card-body text-warning">
             <h5 class="card-title">Advices</h5>
-            <p class="card-text">Descover some tricks and tips I wish I knew ages ago.</p>
+            <p class="card-text">Discover some tricks and tips I wish I knew ages ago.</p>
             <a href="#" class="btn btn-primary">Sure!</a>
           </div>
         </div>
