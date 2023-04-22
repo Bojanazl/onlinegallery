@@ -1,0 +1,2 @@
+root: C:\xampp\htdocs\onlinegallery\nvm
+path: C:\Program Files\nodejs
