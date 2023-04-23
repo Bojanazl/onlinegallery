@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageGalleryController;
+use App\Http\Controllers\LoginRegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +24,27 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/index', function () {
-    return view('home');
+    return view('welcome');
+});
+
+Route::controller(LoginRegisterController::class)->group(function(){
+    Route::get('/register', 'register')->name('register');
+    Route::post('/store', 'store')->name('store');
+    Route::get('/login', 'login')->name('login');
+    Route::post('/authenticate', 'authenticate')->name('authenticate');
+    Route::get('/dashboard', 'dashboard')->name('dashboard');
+    Route::post('/login', 'login')->name('logout');
 });
 
 Route::get('/image-gallery', [ImageGalleryController::class, 'index']);
 Route::post('/image-gallery', [ImageGalleryController::class, 'upload']);
 Route::delete('/image-gallery/{id}', [ImageGalleryController::class, 'destroy']);
 
-
+Route::controller(LoginRegisterController::class)->group( function() {
+    Route::get('/register', 'register'->name('register');
+    Route::post('/store', 'store')->('store';
+    ))
+}) 
 
 Auth::routes();
 
