@@ -40,12 +40,6 @@ Route::get('/image-gallery', [ImageGalleryController::class, 'index']);
 Route::post('/image-gallery', [ImageGalleryController::class, 'upload']);
 Route::delete('/image-gallery/{id}', [ImageGalleryController::class, 'destroy']);
 
-Route::controller(LoginRegisterController::class)->group( function() {
-    Route::get('/register', 'register'->name('register');
-    Route::post('/store', 'store')->('store';
-    ))
-}) 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
