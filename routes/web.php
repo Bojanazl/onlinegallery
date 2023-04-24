@@ -15,16 +15,19 @@ use App\Http\Controllers\LoginRegisterController;
 |
 */
 
+/*Welcome page*/
 Route::get('/', function () {
     return view('welcome');
 });
 
+/*Welcome page*/
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('welcome');
+/*Sends to Dashboard*/
+Route::get('/home', function () {
+    return view('/auth/dashboard');
 });
 
 Route::controller(LoginRegisterController::class)->group(function(){
@@ -41,6 +44,4 @@ Route::post('/image-gallery', [ImageGalleryController::class, 'upload']);
 Route::delete('/image-gallery/{id}', [ImageGalleryController::class, 'destroy']);
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
