@@ -26,7 +26,7 @@ Route::get('/welcome', function () {
 });
 
 /*Sends to Dashboard*/
-Route::get('/home', function () {
+Route::get('/dashboard', function () {
     return view('/auth/dashboard');
 });
 
@@ -39,13 +39,6 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });
 
-/*
-Route::get('registration', [LoginRegisterController::class, 'registration'])->name('register');
-Route::get('login', [LoginRegisterController::class, 'login'])->name('login');
-Route::post('post-login', [LoginRegisterController::class, 'postLogin'])->name('login.post'); 
-Route::post('post-registration', [LoginRegisterController::class, 'postRegistration'])->name('register.post'); 
-Route::get('dashboard', [LoginRegisterController::class, 'dashboard']); 
-Route::get('logout', [LoginRegisterControllerr::class, 'logout'])->name('logout');*/
 
 Route::get('/image-gallery', [ImageGalleryController::class, 'index']);
 Route::post('/image-gallery', [ImageGalleryController::class, 'upload']);

@@ -7,11 +7,7 @@
         <div class="card">
             <div class="card-header background-color:#020812">Welcome!</div>
             <div class="card-body">
-                @if ($message = Session::get('success'))
-                <div class="alert alert-success">
-                    {{ $message }}
-                </div>
-                @else
+       
                 <div class="alert alert-success">
                     You are logged in! Choose the category you want to update:
                 </div>
@@ -35,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            @endif
+           
         </div>
     </div>
 </div>
