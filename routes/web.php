@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageGalleryController;
-use App\Http\Controllers\LoginRegisterController;
+use App\Http\Controllers\Auth\LoginRegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,14 +30,22 @@ Route::get('/home', function () {
     return view('/auth/dashboard');
 });
 
-Route::controller(LoginRegisterController::class)->group(function(){
+Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/register', 'register')->name('register');
     Route::post('/store', 'store')->name('store');
     Route::get('/login', 'login')->name('login');
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/dashboard', 'dashboard')->name('dashboard');
-    Route::post('/login', 'login')->name('logout');
+    Route::post('/logout', 'logout')->name('logout');
 });
+
+/*
+Route::get('registration', [LoginRegisterController::class, 'registration'])->name('register');
+Route::get('login', [LoginRegisterController::class, 'login'])->name('login');
+Route::post('post-login', [LoginRegisterController::class, 'postLogin'])->name('login.post'); 
+Route::post('post-registration', [LoginRegisterController::class, 'postRegistration'])->name('register.post'); 
+Route::get('dashboard', [LoginRegisterController::class, 'dashboard']); 
+Route::get('logout', [LoginRegisterControllerr::class, 'logout'])->name('logout');*/
 
 Route::get('/image-gallery', [ImageGalleryController::class, 'index']);
 Route::post('/image-gallery', [ImageGalleryController::class, 'upload']);

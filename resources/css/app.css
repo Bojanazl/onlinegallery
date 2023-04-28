@@ -2584,7 +2584,7 @@ textarea.form-control-lg {
 .input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg >  {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
@@ -2816,7 +2816,7 @@ textarea.form-control-lg {
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
-  --bs-btn-color: #aaa;
+  --bs-btn-color: #a99292;
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 1px;
   --bs-btn-border-color: transparent;

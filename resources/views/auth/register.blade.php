@@ -41,6 +41,9 @@
                         <label for="password_confirmation" class="col-md-4 col-form-label text-md-end text-start">Confirm Password</label>
                         <div class="col-md-6">
                           <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+                          @if ($errors->has('password_confirmation'))
+                          <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
+                      @endif
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -53,4 +56,4 @@
     </div>    
 </div>
     
-@endsection
+@endsection 
