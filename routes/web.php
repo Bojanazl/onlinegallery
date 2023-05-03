@@ -39,10 +39,13 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });
 
-
-Route::get('/image-gallery', [ImageGalleryController::class, 'index']);
-Route::post('/image-gallery', [ImageGalleryController::class, 'upload']);
-Route::delete('/image-gallery/{id}', [ImageGalleryController::class, 'destroy']);
+Route::controller(ImageGalleryController::class)->group(function() {
+    Route::get('/image-gallery', 'index')->name('image-gallery');
+    Route::post('/image-gallery', 'upload')->name('image-gallery');
+    Route::delete('/image-gallery/{id}', 'destroy')->name('image-gallery');
+});
 
 Auth::routes();
+
+
 
