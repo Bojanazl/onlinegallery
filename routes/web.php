@@ -34,6 +34,9 @@ Route::get('/paintings', function() {
 /*Sculptures page*/
 /*Advices page*/
 /*Art Blog page*/
+Route::get('/blog', function() {
+    return view('pages/blog');
+});
 
 
 /*-------Content Manager Routes-------*/
