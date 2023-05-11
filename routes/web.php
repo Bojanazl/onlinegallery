@@ -15,28 +15,15 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 |
 */
 
-/*-------Web Page Routes-------*/
-
 /*Welcome page*/
 Route::get('/', function () {
-    return view('pages/welcome');
+    return view('welcome');
 });
 
 /*Welcome page*/
 Route::get('/welcome', function () {
-    return view('pages/welcome');
+    return view('welcome');
 });
-
-/*Gallery page*/
-Route::get('/paintings', function() {
-    return view('pages/paintings');
-});
-/*Sculptures page*/
-/*Advices page*/
-/*Art Blog page*/
-
-
-/*-------Content Manager Routes-------*/
 
 /*Sends to Dashboard*/
 Route::get('/dashboard', function () {
