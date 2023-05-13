@@ -80,9 +80,9 @@
           style="max-width: 18rem; --bs-border-opacity: .5;">
           <img src="/images/advices-card.jpg" class="card-img-top" alt="image for advices card">
           <div class="card-body text-warning">
-            <h5 class="card-title">Advices</h5>
-            <p class="card-text">Discover some tricks and tips I wish I knew ages ago.</p>
-            <a href="#" class="btn btn-primary">Sure!</a>
+            <h5 class="card-title">Blog and Advices</h5>
+            <p class="card-text">Discover more about the art and get some tips.</p>
+            <a href="blog" class="btn btn-primary">Sure!</a>
           </div>
         </div>
       </div>
