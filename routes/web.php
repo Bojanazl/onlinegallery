@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageGalleryController;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\PostController;
 
 
 /*

@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Grid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -52,12 +53,12 @@ class PostResource extends Resource
                     ->required(),
                 Forms\Components\Checkbox::make('active')
                     ->required(),
-                Forms\Components\DatePicker::make('date_of_birth')->format('d/m/Y'),
+                DatePicker::make('date_of_birth')->format('d/m/Y'),
                 Forms\Components\Select::make('category')
                     ->required()
                     ->label('Category')
-                    ->relationship('categories', 'title')
-                    ->options(Category::all()->pluck('title','id')->toArray())
+                    ->relationship('category', 'title')
+                    ->options(Category::all()->pluck('title','id'))
                     ->preload()
                 ])   
             ]);
