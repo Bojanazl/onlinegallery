@@ -47,13 +47,15 @@ class PostResource extends Resource
                     ->maxLength(2048),
                 ]),
 
+               
+
                 
                 Forms\Components\FileUpload::make('thumbnail'),
                 Forms\Components\Textarea::make('body')
                     ->required(),
-                Forms\Components\Checkbox::make('active')
+                Forms\Components\Toggle::make('active')
                     ->required(),
-                DatePicker::make('date_of_birth')->format('d/m/Y'),
+                Forms\Components\DateTimePicker::make('Published_at'),
                 Forms\Components\Select::make('category')
                     ->required()
                     ->label('Category')

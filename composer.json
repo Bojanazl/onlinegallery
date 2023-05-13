@@ -59,6 +59,12 @@
             "dont-discover": []
         }
     },
+
+    "post-update-cmd": [
+        
+        "@php artisan filament:upgrade"
+    ],
+
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -70,4 +76,5 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true
+
 }
