@@ -1,9 +1,11 @@
 <?php
 
+
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageGalleryController;
 use App\Http\Controllers\Auth\LoginRegisterController;
-use App\Http\Controllers\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +46,7 @@ Route::get('/dashboard', function () {
     return view('/auth/dashboard');
 });
 
-/*-------
+
 Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/register', 'register')->name('register');
     Route::post('/store', 'store')->name('store');
@@ -54,6 +56,7 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });-------*/
 
+/*Sends to image-gallery to upload or delete images*/
 Route::controller(ImageGalleryController::class)->group(function() {
     Route::get('/image-gallery', 'index')->name('image-gallery');
     Route::post('/image-gallery', 'upload')->name('image-gallery');
