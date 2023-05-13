@@ -43,6 +43,7 @@ Route::get('/dashboard', function () {
     return view('/auth/dashboard');
 });
 
+/*-------
 Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/register', 'register')->name('register');
     Route::post('/store', 'store')->name('store');
@@ -50,7 +51,7 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
-});
+});-------*/
 
 Route::controller(ImageGalleryController::class)->group(function() {
     Route::get('/image-gallery', 'index')->name('image-gallery');
@@ -59,9 +60,6 @@ Route::controller(ImageGalleryController::class)->group(function() {
 });
 
 Auth::routes();
-
-
-
 
 Auth::routes();
 
