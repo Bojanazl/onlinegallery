@@ -32,12 +32,11 @@
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 </head>
-
-
 <body class="bg-white font-family-karla">
-    <!-- Text Header -->
-  
-    <nav class="w-full py-4 border-danger border-t border-bottom-1 bg-gray-100 navbar navbar-default navbar-sticky-top" x-data="{ open: false }">
+
+    <!-- Top Header -->
+    
+    <nav class="w-full py-1  bg-gray-100 navbar navbar-default navbar-sticky-top " x-data="{ open: false }">
         <div class="block sm:hidden">
             <a
                 href="#"
@@ -69,7 +68,7 @@
                     Art Blog & Advices
                 </a>
                 <p class="text-lg text-gray-600">
-                    The more we know...
+                    The more we share, the more we know...
                 </p>
             </div>
         </header>
@@ -175,6 +174,8 @@
             }
         }
     </script>
+
+
 
 </body>
 </html>
