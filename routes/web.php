@@ -54,7 +54,7 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
-});-------*/
+});
 
 /*Sends to image-gallery to upload or delete images*/
 Route::controller(ImageGalleryController::class)->group(function() {
@@ -64,7 +64,7 @@ Route::controller(ImageGalleryController::class)->group(function() {
 });
 
 
-=======
+
 /*Routes for users*/
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
