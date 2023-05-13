@@ -53,11 +53,12 @@ class PostResource extends Resource
                 Forms\Components\Checkbox::make('active')
                     ->required(),
                 Forms\Components\DateTimePicker::make('published_at'),
-                Forms\Components\Select::make('id')
-                    ->required()
+                Forms\Components\Select::make('category')
+                    //->required()
                     ->label('Category')
                     ->relationship('categories', 'title')
                     ->options(Category::all()->pluck('title','id')->toArray())
+                    ->preload()
                 ])   
             ]);
 

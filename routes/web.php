@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageGalleryController;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,7 @@ Route::get('/paintings', function() {
 /*Sculptures page*/
 /*Advices page*/
 /*Art Blog page*/
-
+Route::get('/blog', [PostController::class, 'index'])->name('blog');
 
 /*-------Content Manager Routes-------*/
 
@@ -59,8 +60,9 @@ Route::controller(ImageGalleryController::class)->group(function() {
     Route::delete('/image-gallery/{id}', 'destroy')->name('image-gallery');
 });
 
-Auth::routes();
-
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+
