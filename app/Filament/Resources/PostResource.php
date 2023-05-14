@@ -55,7 +55,8 @@ class PostResource extends Resource
                     ->required(),
                 Forms\Components\Toggle::make('active')
                     ->required(),
-                Forms\Components\DateTimePicker::make('Published_at'),
+                Forms\Components\DateTimePicker::make('published_at')
+                    ->columnSpan(8),
                 Forms\Components\Select::make('category')
                     ->required()
                     ->label('Category')
@@ -81,6 +82,7 @@ class PostResource extends Resource
                 Tables\Columns\IconColumn::make('active')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('published_at')
+                    ->sortable()
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('user.name'),
                 Tables\Columns\TextColumn::make('created_at')
