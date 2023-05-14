@@ -13,10 +13,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::query()->where('active', '=', 1)
+        $posts = Post::with('category')->get()->where('active', '=', 1);
         //->whereDate('published_at', '<', Carbon::now())
         //->orderBy('published_at','desc')
-        ->paginate();
+        //->paginate();
 
         return view('blog', compact('posts'));
     }

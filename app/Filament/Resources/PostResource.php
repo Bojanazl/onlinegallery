@@ -51,7 +51,7 @@ class PostResource extends Resource
 
                 
                 Forms\Components\FileUpload::make('thumbnail'),
-                Forms\Components\Textarea::make('body')
+                Forms\Components\RichEditor::make('body')
                     ->required(),
                 Forms\Components\Toggle::make('active')
                     ->required(),
