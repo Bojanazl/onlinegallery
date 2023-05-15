@@ -37,7 +37,7 @@
 <body class="bg-white font-family-karla">
     <!-- Text Header -->
   
-    <nav class="w-full py-4 border-danger border-t border-bottom-1 bg-gray-100 navbar navbar-default navbar-sticky-top" x-data="{ open: false }">
+    <nav class="w-full py-4 border-danger border-t border-bottom-1 bg-gray-500 navbar navbar-default navbar-sticky-top" x-data="{ open: false }">
         <div class="block sm:hidden">
             <a
                 href="#"
@@ -50,10 +50,10 @@
         </div>
         <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
             <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-                <a href="welcome" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Home</a>
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Paintings</a>
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Sculptures</a>
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">About me</a>
+                <a href="welcome" class="hover:bg-green-500 rounded py-2 px-4 mx-2">Home</a>
+                <a href="#" class="hover:bg-green-500 rounded py-2 px-4 mx-2">Paintings</a>
+                <a href="#" class="hover:bg-green-500 rounded py-2 px-4 mx-2">Sculptures</a>
+                <a href="#" class="hover:bg-green-500 rounded py-2 px-4 mx-2">About me</a>
             </div>
         </div>
     </nav>
@@ -66,10 +66,10 @@
           <header class="w-full container mx-auto">
             <div class="flex flex-col items-center py-12">
                 <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl " href="#">
-                    Art Blog & Advices
+                    Art Blog
                 </a>
                 <p class="text-lg text-gray-600">
-                    The more we know...
+                    The more we share...the more we know!
                 </p>
             </div>
         </header>

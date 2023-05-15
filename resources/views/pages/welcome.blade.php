@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 <style>
   body, html {
     height: 100%;
@@ -140,27 +141,29 @@ body {
 
 /* Style the counter cards */
 .card {
-  padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(1, 38, 26, 0.2);
-  padding: 16px;
+  padding: 15px;
   text-align: center;
   background-color: rgba(48, 175, 201, 0.141);
-  font-family: arial;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card-inner {
-  padding: 10px;
+  padding: 15px;
   box-shadow: 0 4px 8px 0 rgba(1, 2, 16, 0.508);
   text-align: center;
   background-color: #020812;
   border-color: rgb(13, 108, 128);
-  border-bottom: 3px solid;
-  font-family: arial;
-  border-bottom: 3px solid;
+  border-bottom: 3px solid
 }
 
+.font-aclonica {
+  font-family: 'Aclonica';
+}
+
+
 .card button {
-  margin-top: 50px;
+  margin-top: 20px;
   border: none;
   outline: 0;
   padding: 12px;
@@ -214,7 +217,7 @@ body {
     <a href="#news"><h8 class="font-color">Paintings</h8></a>
     <a href="#news"><h8 class="font-color">Sculptures</h8></a>
     <a href="#news"><h8 class="font-color">Advices</h8></a>
-    <a href="#news"><h8 class="font-color">Art Blog</h8></a>
+    <a href="/blog"><h8 class="font-color">Art Blog</h8></a>
   </div>
 </div>
 
@@ -231,8 +234,8 @@ body {
 <div class="column">
   <div class="card">
     <div class="card-inner">
-      <img src="/images/greed.jpg" alt="Denim Jeans" style="width:100%">
-      <h1 class="font-color">Paintings Gallery</h1>
+      <img src="/images/greed.jpg" alt="paintings" style="width:100%">
+      <h1 class="font-color font-aclonica">Paintings Gallery</h1>
       <p class="font-color">Browse through my painintgs and see my latest work</p>
       <p><button>Enter</button></p>
     </div>
@@ -242,8 +245,8 @@ body {
 <div class="column">
   <div class="card">
     <div class="card-inner">
-      <img src="/images/greed.jpg" alt="Denim Jeans" style="width:100%">
-      <h1 class="font-color">Sculptures</h1>
+      <img src="/images/empty.jpg" alt="sculptures" style="width:100%">
+      <h1 class="font-color font-aclonica">Sculptures</h1>
       <p class="font-color">My latest passion is sculpting. Take a look at some of the things I've made.</p>
       <p><button>Ok</button></p>
     </div>
@@ -253,8 +256,8 @@ body {
 <div class="column">
   <div class="card">
     <div class="card-inner">
-      <img src="/images/greed.jpg" alt="Denim Jeans" style="width:100%">
-      <h1 class="font-color">Advies</h1>
+      <img src="/images/socity.jpg" alt="advices" style="width:100%">
+      <h1 class="font-color font-aclonica">Advices</h1>
       <p class="font-color">After so many years, I do have some tips to share.</p>
       <p><button>Sure!</button></p>
     </div>
@@ -264,8 +267,8 @@ body {
 <div class="column">
   <div class="card">
     <div class="card-inner">
-      <img src="/images/greed.jpg" alt="Denim Jeans" style="width:100%">
-      <h1 class="font-color">Art blog</h1>
+      <img src="/images/melting.jpg" alt="blog" style="width:100%">
+      <h1 class="font-color font-aclonica">Art blog</h1>
       <p class="font-color">All about art and artistic life: news, interesting stuff, etc.</p>
       <p><a href="/blog"> <button type="button" class="btn btn-outline-primary float-right">Lets Read</button></a></p>
      
