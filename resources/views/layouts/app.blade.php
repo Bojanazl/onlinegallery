@@ -32,11 +32,12 @@
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 </head>
-<body class="bg-white font-family-karla">
 
-    <!-- Top Header -->
-    
-    <nav class="w-full py-1  bg-gray-100 navbar navbar-default navbar-sticky-top " x-data="{ open: false }">
+
+<body class="bg-white font-family-karla">
+    <!-- Text Header -->
+  
+    <nav class="w-full py-4 border-danger border-t border-bottom-1 bg-gray-100 navbar navbar-default navbar-sticky-top" x-data="{ open: false }">
         <div class="block sm:hidden">
             <a
                 href="#"
@@ -68,15 +69,12 @@
                     Art Blog & Advices
                 </a>
                 <p class="text-lg text-gray-600">
-                    The more we share, the more we know...
+                    The more we know...
                 </p>
             </div>
         </header>
         </div>
       </div>
-    
-
-
 
 
     <div class="container mx-auto flex flex-wrap py-6">
@@ -85,41 +83,32 @@
 
         <!-- Sidebar Section -->
 
-
-
-      
-    
-
-
         <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
             <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-                <p class="text-xl font-semibold pb-5">About Us</p>
-                <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est eu odio sagittis tristique. Vestibulum ut finibus leo. In hac habitasse platea dictumst.</p>
+                <p class="text-xl font-semibold pb-5">About me</p>
+                <p class="pb-2">Comng soon...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est eu odio sagittis tristique. Vestibulum ut finibus leo. In hac habitasse platea dictumst.</p>
                 <a href="#" class="w-full bg-gray-800 text-white font-bold text-sm uppercase rounded hover:bg-green-700 flex items-center justify-center px-2 py-3 mt-4">
-                    Get to know us
+                    Read more
                 </a>
             </div>
 
             <div class="w-full bg-white shadow flex flex-col my-4 p-6">
                 <p class="text-xl font-semibold pb-5">Instagram</p>
                 <div class="grid grid-cols-3 gap-3">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=2">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=3">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=4">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=5">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=6">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=7">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=8">
-                    <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=9">
+                    <img class="hover:opacity-75" src="/images/greed.jpg">
+                    <img class="hover:opacity-75" src="/images/handsof.jpg">
+                    <img class="hover:opacity-75" src="/images/spring.jpg">
+                    <img class="hover:opacity-75" src="/images/melting.jpg">
+                    <img class="hover:opacity-75" src="/images/overthinking.jpg">
+                    <img class="hover:opacity-75" src="/images/socity.jpg">
+                    <img class="hover:opacity-75" src="/images/theillusion.jpg">
+                    <img class="hover:opacity-75" src="/images/thecreator.jpg">
+                    <img class="hover:opacity-75" src="/images/empty.jpg">
                 </div>
                 <a href="https://www.instagram.com/bojanajokicart/" class="w-full bg-gray-800 text-white font-bold text-sm uppercase rounded hover:bg-green-700 flex items-center justify-center px-2 py-3 mt-6">
                     <i class="fab fa-instagram mr-2"></i> Follow @bojanajokicart
                 </a>
             </div>
-
-        </aside>
-
     </div>
 
     <footer class="w-full border-t bg-white pb-12">
@@ -127,19 +116,11 @@
             class="relative w-full flex items-center invisible md:visible md:pb-12"
             x-data="getCarouselData()"
         >
-            <button
-                class="absolute bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
-                x-on:click="decrement()">
-                &#8592;
-            </button>
+           
             <template x-for="image in images.slice(currentIndex, currentIndex + 6)" :key="images.indexOf(image)">
                 <img class="w-1/6 hover:opacity-75" :src="image">
             </template>
-            <button
-                class="absolute right-0 bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 mr-12"
-                x-on:click="increment()">
-                &#8594;
-            </button>
+            
         </div>
         <div class="w-full container mx-auto flex flex-col items-center">
             <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
@@ -149,7 +130,7 @@
             <div class="uppercase pb-6">&copy; bojanajokicart</div>
         </div>
     </footer>
-
+<!--
     <script>
         function getCarouselData() {
             return {
@@ -174,6 +155,7 @@
             }
         }
     </script>
+    -->
 
 
 

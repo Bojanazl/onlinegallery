@@ -1,166 +1,299 @@
-!DOCTYPE html>
-
-<html lang="en">
-
-
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Bojana Jokic Arts</title>
-      <meta name="description" content="">
-  
-      <!-- Tailwind -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-      <style>
-          @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-  
-          .font-family-karla {
-              font-family: karla;
-          }
-  
-          .navbar-sticky-top
-  {
-      position: fixed;
-      z-index: 999;
-      opacity:1;
-      width: 100%;
+<!DOCTYPE html>
+<html>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
   }
-          
-      </style>
   
-      <!-- AlpineJS -->
-      <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-      <!-- Font Awesome -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-  </head>
+  .hero-image {
+    background-image: url("/images/header.png");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: rgba(87, 190, 211, 0.626);
+  }
+  
+  .hero-text-subbtitle {
+    text-align: left;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: rgba(87, 190, 211, 0.426);
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: rgba(34, 98, 111, 0.678);
+    background-color: #ffffff;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: rgb(56, 85, 109);
+  }
+  
+  .top-container {
+    background-color: #020812;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .header {
+    padding: 10px 10px;
+    background: #001b28dc;
+    color: rgba(87, 190, 211, 0.626);
+    padding: 10px;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .navbar {
+  overflow: hidden;
+  background-color: #04113900;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(87, 190, 211, 0.626);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(1, 38, 26, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: rgba(48, 175, 201, 0.141);
+  font-family: arial;
+}
+
+.card-inner {
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(1, 2, 16, 0.508);
+  text-align: center;
+  background-color: #020812;
+  border-color: rgb(13, 108, 128);
+  border-bottom: 3px solid;
+  font-family: arial;
+  border-bottom: 3px solid;
+}
+
+.card button {
+  margin-top: 50px;
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color:  rgb(20, 152, 179);
+  background-color: rgba(48, 175, 201, 0.275);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.font-color {
+  color: rgb(20, 152, 179);
+}
+
+.footer {
+  background-image:url("/images/footer.png");;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(255, 0, 0, 0);
+   color: rgba(10, 119, 120, 0.386);
+   text-align: center;
+}
+  
+</style>
 
 
 
 
 
-  <body style="background-color:#020812;"> <!--#020812-->
 
-  <div class="grid grid-cols-6 gap-4">
-    <div class="col-span-6 ">
-        <!-- Header image -->
-        <div class="card bg-transparent border-bottom-0">
-          <img src="/images/header.png" class="card-img" alt="header image">
-          <div class="card-img-overlay">
-            <h5 class="card-title">Bojana Jokic Art</h5>
-            <p class="card-text">Welcome. Feel free to browse.</p>
-            <p class="card-text"><small>I love art, btw.</small></p>
-          </div>
-        </div>
-        <!-- Header image -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/resources/css/onlinegallery.css">
+</head>
+
+
+<body style="background-color:#020812;"> <!--#020812-->
+
+ 
+  <!--Top navigation bar-->
+<div class="header" id="myHeader">
+  <div class="navbar">
+    <a href="#home"><h8 class="font-color">Portfolio</h8></a>
+    <a href="#news"><h8 class="font-color">Paintings</h8></a>
+    <a href="#news"><h8 class="font-color">Sculptures</h8></a>
+    <a href="#news"><h8 class="font-color">Advices</h8></a>
+    <a href="#news"><h8 class="font-color">Art Blog</h8></a>
   </div>
+</div>
 
-  <div class="grid grid-cols-6 gap-4">
-    
-    <div class="col-span-3 gap-4">
-      <div class="container text-center mt-3">
-      <div class="row">
-        <div class="col-3">
-          <div class="card border-success mb-3; border-bottom-0 rounded-end; text-bg-dark"
-            style="max-width: 18rem; --bs-border-opacity: .5;">
-            <img src="/images/paintings-card.jpg" class="card-img-top" alt="mages for paintings card">
-            <div class="card-body text-success">
-              <h5 class="card-title">Paintings</h5>
-              <p class="card-text">Browse through the gallery to see some of my latest and oldest works.
-              </p>
-              <a href="#" class="btn btn-primary">Take a look</a>
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
-  
-        <div class="col-span-3 gap-4">
-          <div class="card border-danger mb-3; border-bottom-0 rounded-end; text-bg-dark"
-            style="max-width: 18rem; --bs-border-opacity: .5;">
-            <img src="/images/sculpture-card.jpg" class="card-img-top" alt="image for sculpture card">
-            <div class="card-body text-danger">
-              <h5 class="card-title">Sculptures</h5>
-              <p class="card-text">Take a look at my latest passion: sculpting.</p>
-              <a href="#" class="btn btn-primary">Lets see</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class=" col-span-3 gap-4"></div>
-        <div class="col-3">
-          <div class="card border-warning mb-3; border-bottom-0 rounded-end"
-            style="max-width: 18rem; --bs-border-opacity: .5;">
-            <img src="/images/advices-card.jpg" class="card-img-top" alt="image for advices card">
-            <div class="card-body text-warning">
-              <h5 class="card-title">Blog and Advices</h5>
-              <p class="card-text">Discover more about the art and get some tips.</p>
-              <a href="blog" class="btn btn-primary">Sure!</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
+<!--Image header bar-->
+<div class="top-container hero-image">
+  <h1 class="hero-text">Bojana Jokic Art</h1>
+  <p class="hero-text-subbtitle">Welcome. Feel free to browse.</p>
+</div>
 
+<br />
+<br />
+<!--Content-->
+
+<div class="column">
+  <div class="card">
+    <div class="card-inner">
+      <img src="/images/greed.jpg" alt="Denim Jeans" style="width:100%">
+      <h1 class="font-color">Paintings Gallery</h1>
+      <p class="font-color">Browse through my painintgs and see my latest work</p>
+      <p><button>Enter</button></p>
+    </div>
   </div>
-  <div class="col-span- sm:col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-2...">
+</div>
 
-
+<div class="column">
+  <div class="card">
+    <div class="card-inner">
+      <img src="/images/greed.jpg" alt="Denim Jeans" style="width:100%">
+      <h1 class="font-color">Sculptures</h1>
+      <p class="font-color">My latest passion is sculpting. Take a look at some of the things I've made.</p>
+      <p><button>Ok</button></p>
+    </div>
   </div>
-  <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 xl:col-span-4...">
+</div>
 
+<div class="column">
+  <div class="card">
+    <div class="card-inner">
+      <img src="/images/greed.jpg" alt="Denim Jeans" style="width:100%">
+      <h1 class="font-color">Advies</h1>
+      <p class="font-color">After so many years, I do have some tips to share.</p>
+      <p><button>Sure!</button></p>
+    </div>
+  </div>
+</div>
 
+<div class="column">
+  <div class="card">
+    <div class="card-inner">
+      <img src="/images/greed.jpg" alt="Denim Jeans" style="width:100%">
+      <h1 class="font-color">Art blog</h1>
+      <p class="font-color">All about art and artistic life: news, interesting stuff, etc.</p>
+      <p><a href="/blog"> <button type="button" class="btn btn-outline-primary float-right">Lets Read</button></a></p>
+     
+    </div>
   </div>
 </div>
 
 
+ <!-- Footer image -->
+ <div class="footer">
+  <h1 class="hero-text">Bojana Jokic Art</h1>
+  <p class="hero-text-subbtitle">All Rights Reserved an stuff like that...</p>
+</div>
+ <!-- Footer image -->
 
+<script>
+window.onscroll = function() {myFunction()};
 
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  </div>
-
-    </div>
-  </div>
-
-
-
-
-
-  <!-- Footer image -->
-  <img class="img-fluid" src="/images/footer.png" alt="header image" mt-3>
-  <!-- Footer image -->
-
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 </body>
+</html>

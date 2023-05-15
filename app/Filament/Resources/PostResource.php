@@ -17,6 +17,7 @@ use Filament\Forms\Components\Grid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Closure;
+use PhpParser\Node\Stmt\Label;
 use Str;
 
 class PostResource extends Resource
@@ -29,45 +30,38 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-                Card::make()
-                ->schema([
-                    Grid::make(2)
+                Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\TextInput::make('title')
-                        ->autofocus()
-                    ->required()
-                    ->maxLength(2048)
-                    ->reactive()
-                    ->afterStateUpdated(function(Closure $set, $state) {
-                        $set('slug', Str::slug($state));
-                    }),
-                
-                    Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(2048),
-                ]),
+                            ->required()
+                            ->maxLength(2048)
+                            ->reactive()
+                            ->afterStateUpdated(function (Closure $set, $state) {
+                                $set('slug', Str::slug($state));
+                            }),
+                        Forms\Components\TextInput::make('slug')
+                            ->required()
+                            ->maxLength(2048),
+                        Forms\Components\Textarea::make('body')
+                            ->required(),
+                        Forms\Components\Toggle::make('active')
+                            ->required(),
+                        Forms\Components\DateTimePicker::make('published_at'),
+                    ])->columnSpan(8),
 
-               
-
-                
-                Forms\Components\FileUpload::make('thumbnail'),
-                Forms\Components\RichEditor::make('body')
-                    ->required(),
-                Forms\Components\Toggle::make('active')
-                    ->required(),
-                Forms\Components\DateTimePicker::make('published_at')
-                    ->columnSpan(8),
-                Forms\Components\Select::make('category')
-                    ->required()
-                    ->label('Category')
-                    ->relationship('category', 'title')
-                    ->options(Category::all()->pluck('title','id'))
-                    ->preload()
-                ])   
-            ]);
-
-            
+                Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\FileUpload::make('thumbnail'),
+                        Forms\Components\Select::make('category')
+                            ->required()
+                            ->relationship('category', 'title')
+                            ->label('Category')
+                            ->options(Category::all()->pluck('title','id')),
+                    ])->columnSpan(4)
+            ])->columns(12);
     }
+
+
 
    
 
