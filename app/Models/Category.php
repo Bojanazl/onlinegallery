@@ -17,11 +17,4 @@ protected $fillable = ['title'/*, 'slug'*/];
     {
         return $this->hasMany(Post::class);
     }
-
-    // public function publishedPosts(): BelongsToMany
-    // {
-    //     return $this->belongsToMany(Post::class)
-    //         ->where('active', '=', 1)
-    //         ->whereDate('published_at', '<', Carbon::now());
-    // }
 }

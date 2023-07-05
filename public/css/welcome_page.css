@@ -134,6 +134,7 @@ body {
   }
 }
 
+/* CARDS */
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(1, 38, 26, 0.2);
@@ -155,7 +156,6 @@ body {
 .font-aclonica {
   font-family: 'Aclonica';
 }
-
 
 .card button {
   margin-top: 20px;
@@ -188,3 +188,24 @@ body {
    color: rgba(10, 119, 120, 0.386);
    text-align: center;
 }
+
+/* LINK STYLES */
+/* unvisited link */
+a:link {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(136, 218, 200);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(148, 214, 201);
+  }
