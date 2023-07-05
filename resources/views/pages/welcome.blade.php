@@ -40,7 +40,6 @@
       <img src="/images/greed.jpg" alt="paintings" style="width:100%">
       <h1 class="font-color font-aclonica">Paintings Gallery</h1>
       <p class="font-color">Browse through my painintgs and see my latest work</p>
-      <p><button>Enter</button></p>
     </div>
   </div>
 </div>
@@ -51,7 +50,6 @@
       <img src="/images/empty.jpg" alt="sculptures" style="width:100%">
       <h1 class="font-color font-aclonica">Sculptures</h1>
       <p class="font-color">My latest passion is sculpting. Take a look at some of the things I've made.</p>
-      <p><button>Ok</button></p>
     </div>
   </div>
 </div>
@@ -62,7 +60,6 @@
       <img src="/images/socity.jpg" alt="advices" style="width:100%">
       <h1 class="font-color font-aclonica">Advices</h1>
       <p class="font-color">After so many years, I do have some tips to share.</p>
-      <p><button>Sure!</button></p>
     </div>
   </div>
 </div>
@@ -72,9 +69,7 @@
     <div class="card-inner">
       <img src="/images/melting.jpg" alt="blog" style="width:100%">
       <h1 class="font-color font-aclonica"><a href="/blog">Art blog</a></h1>
-      <p class="font-color">All about art and artistic life: news, interesting stuff, etc.</p>
-      <p><a href="/blog"> <button type="button" class="btn btn-outline-primary float-right">Lets Read</button></a></p>
-     
+      <p class="font-color">All about art and artistic life: news, interesting stuff, etc.</p>    
     </div>
   </div>
 </div>

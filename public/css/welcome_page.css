@@ -138,7 +138,7 @@ body {
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(1, 38, 26, 0.2);
-  padding: 15px;
+  padding: 1px;
   text-align: center;
   background-color: rgba(48, 175, 201, 0.141);
   font-family: Arial, Helvetica, sans-serif;
