@@ -23,6 +23,7 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
+<<<<<<< Updated upstream
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(2048),
@@ -42,6 +43,43 @@ class PostResource extends Resource
             ]);
     }
 
+=======
+                Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\TextInput::make('title')
+                            ->required()
+                            ->maxLength(2048)
+                            ->reactive()
+                            ->afterStateUpdated(function (Closure $set, $state) {
+                                $set('slug', Str::slug($state));
+                            }),
+                        Forms\Components\TextInput::make('slug')
+                            ->required()
+                            ->maxLength(2048),
+                        Forms\Components\RichEditor::make('body')
+                            ->required(),
+                        Forms\Components\Toggle::make('active')
+                            ->required(),
+                        Forms\Components\DateTimePicker::make('published_at'),
+                    ])->columnSpan(8),
+
+                Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\FileUpload::make('thumbnail'),
+                        Forms\Components\Select::make('category')
+                            ->required()
+                            ->relationship('category', 'title')
+                            ->label('Category')
+                            ->options(Category::all()->pluck('title', 'id')),
+                    ])->columnSpan(4)
+            ])->columns(12);
+    }
+
+
+
+
+
+>>>>>>> Stashed changes
     public static function table(Table $table): Table
     {
         return $table
@@ -71,14 +109,14 @@ class PostResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -87,5 +125,5 @@ class PostResource extends Resource
             'view' => Pages\ViewPost::route('/{record}'),
             'edit' => Pages\EditPost::route('/{record}/edit'),
         ];
-    }    
+    }
 }
