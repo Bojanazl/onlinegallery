@@ -23,7 +23,6 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-<<<<<<< Updated upstream
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(2048),
@@ -43,7 +42,7 @@ class PostResource extends Resource
             ]);
     }
 
-=======
+
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\TextInput::make('title')
