@@ -6,6 +6,8 @@
   
   .hero-image {
     background-image: url("/images/header.png");
+    /*-webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);*/
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -150,7 +152,8 @@ body {
   text-align: center;
   background-color: #020812;
   border-color: rgb(13, 108, 128);
-  border-bottom: 3px solid
+  border-bottom: 3px solid;
+  filter: grayscale(100%);
 }
 
 .font-aclonica {
@@ -209,3 +212,4 @@ a:link {
   a:active {
     color: rgb(148, 214, 201);
   }
+

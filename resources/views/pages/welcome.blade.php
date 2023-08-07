@@ -25,7 +25,7 @@
 </div>
 
 <!--Image header bar-->
-<div class="top-container hero-image">
+<div class="top-container hero-image" id="grad">
   <h1 class="hero-text">Bojana Jokic Art</h1>
   <p class="hero-text-subbtitle">Welcome. Feel free to browse.</p>
 </div>
@@ -47,7 +47,7 @@
 <div class="column">
   <div class="card">
     <div class="card-inner">
-      <img src="/images/empty.jpg" alt="sculptures" style="width:100%">
+      <img src="/images/empty_cut.png" alt="sculptures" style="width:100%">
       <h1 class="font-color font-aclonica">Sculptures</h1>
       <p class="font-color">My latest passion is sculpting. Take a look at some of the things I've made.</p>
     </div>
@@ -67,7 +67,7 @@
 <div class="column">
   <div class="card">
     <div class="card-inner">
-      <img src="/images/melting.jpg" alt="blog" style="width:100%">
+      <img src="/images/melting_cut.png" alt="blog" style="width:100%">
       <h1 class="font-color font-aclonica"><a href="/blog">Art blog</a></h1>
       <p class="font-color">All about art and artistic life: news, interesting stuff, etc.</p>    
     </div>
