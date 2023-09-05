@@ -19,14 +19,22 @@ class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationGroup = 'Content'; //places the page under new panel
+    protected static ?string $navigationIcon = 'heroicon-o-collection'; //page icon
 
-    protected static ?string $navigationGroup = 'Content';
+   
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
+                    ->required()
+                    ->maxLength(2048)
+                    ->reactive()
+                    ->afterStateUpdated(function(Closure $set, $state) {
+                        $set('slug', Str::slug($state));
+                    }),
+                Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(2048)
             ]);
@@ -37,6 +45,7 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')

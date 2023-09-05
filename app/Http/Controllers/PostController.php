@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -13,13 +14,21 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('category')->get()->where('active', '=', 1)
+        $posts = Post::query()
+        ->where('active', '=', 1)
         //->where('published_at', '<', Carbon::now())
-        //->paginate()
-        ->sortByDesc('published_at')
-        ;
+        ->orderBy('published_at', 'desc')
+        ->paginate();
 
         return view('blog', compact('posts'));
+
+        /*
+        if($name = User::with('name')->where('name', '=', null)){
+            $name = 'unknown';
+        }
+        */
+
+
     }
 
     /**

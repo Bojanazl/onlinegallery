@@ -28,14 +28,14 @@ class Post extends Model
         return $this->belongsTo(Category::class, 'category_id');
     }
 
-    public function shortBody($words = 30): string
+    public function shortBody(): string
     {
         return Str::words(strip_tags($this->body), 50);
     }
 
     public function getFormattedDate()
     {
-        return $this->published_at->format('F jS Y');
+        return $this->published_at->format('jS F Y');
     }
 
     public function getThumbnail()
