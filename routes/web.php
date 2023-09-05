@@ -40,9 +40,9 @@ Route::get('/paintings', function() {
 /*Art Blog page*/
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
 
-/*-------Content Manager Routes-------*/
+/*-------Content Manager Routes-------
 
-/*Sends to Dashboard*/
+
 Route::get('/dashboard', function () {
     return view('/auth/dashboard');
 });
@@ -51,13 +51,12 @@ Route::get('/dashboard', function () {
 Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/register', 'register')->name('register');
     Route::post('/store', 'store')->name('store');
-    Route::get('/login', 'login')->name('login');
+    //Route::get('/login', 'login')->name('login');
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
 });
 
-/*Sends to image-gallery to upload or delete images*/
 Route::controller(ImageGalleryController::class)->group(function() {
     Route::get('/image-gallery', 'index')->name('image-gallery');
     Route::post('/image-gallery', 'upload')->name('image-gallery');
@@ -65,14 +64,12 @@ Route::controller(ImageGalleryController::class)->group(function() {
 });
 
 
-
-/*Routes for users*/
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('categories', CategorieController::class);
 });
-
+*/
 /*Route::get('/home', [HomeController::class, 'index'])->name('home');*/
 
 Route::controller(UserController::class)->group(function() {

@@ -16,18 +16,10 @@ class PostController extends Controller
     {
         $posts = Post::query()
         ->where('active', '=', 1)
-        //->where('published_at', '<', Carbon::now())
         ->orderBy('published_at', 'desc')
         ->paginate();
 
         return view('blog', compact('posts'));
-
-        /*
-        if($name = User::with('name')->where('name', '=', null)){
-            $name = 'unknown';
-        }
-        */
-
 
     }
 

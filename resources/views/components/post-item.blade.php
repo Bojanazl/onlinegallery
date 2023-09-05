@@ -25,7 +25,7 @@ article.shadow {
     <!-- Article Image -->
     <div class="content-center background">
         <a href="#" class="hover:opacity-75" >
-            <img src="{{$post->getThumbnail()}}"> 
+            <img src="/storage/{{$post->thumbnail}}"> 
         </a>       
     </div>
     

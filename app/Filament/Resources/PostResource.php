@@ -53,7 +53,7 @@ class PostResource extends Resource
                             ->required(),
                             Forms\Components\Toggle::make('active')
                             ->required(),
-                            Forms\Components\DateTimePicker::make('published_at')
+                            Forms\Components\DatePicker::make('published_at')
                             ->required()
                         ])->columnSpan(12),
 
@@ -66,7 +66,7 @@ class PostResource extends Resource
                                 ->relationship('category', 'title')
                                 ->label('Category')
                                 ->options(Category::all()->pluck('title','id'))
-                                ->required(),
+                                //->required(),
                                 ])->columnSpan(12)
                                 ->columns(5)
                             ]);

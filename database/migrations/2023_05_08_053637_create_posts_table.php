@@ -19,12 +19,15 @@ return new class extends Migration
             $table->string('thumbnail', 2048)->nullable();
             $table->longText('body');
             $table->boolean('active')->default(false);
-            $table->datetime('published_at');
+            $table->datetime('published_at')->nullable();
             $table->foreignIdFor(\App\Models\User::class, 'user_id');
-            $table->foreignIdFor(Category::class, 'category_id');
+            $table->foreignIdFor(Category::class);
             $table->timestamps();
         });
     }
+
+    
+
 
     /**
      * Reverse the migrations.

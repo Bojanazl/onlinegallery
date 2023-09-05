@@ -12,7 +12,7 @@ class Category extends Model
 {
     use HasFactory;
 
-protected $fillable = ['title'/*, 'slug'*/];
+protected $fillable = ['title', 'slug'];
     public function post(): HasMany
     {
         return $this->hasMany(Post::class);
