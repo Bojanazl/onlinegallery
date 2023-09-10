@@ -69,7 +69,7 @@
                     Art Blog
                 </a>
                 <p class="text-lg text-gray-600">
-                    The more we share...the more we know!
+                    {{ \App\Models\TextWidget::getTitle('header-subtitle') }}
                 </p>
             </div>
         </header>
@@ -81,17 +81,7 @@
 
       {{$slot}}
 
-        <!-- Sidebar Section -->
-
-        <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
-            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-                <p class="text-xl font-semibold pb-5">About me</p>
-                <p class="pb-2">Comng soon...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est eu odio sagittis tristique. Vestibulum ut finibus leo. In hac habitasse platea dictumst.</p>
-                <a href="#" class="w-full bg-gray-800 text-white font-bold text-sm uppercase rounded hover:bg-green-700 flex items-center justify-center px-2 py-3 mt-4">
-                    Read more
-                </a>
-            </div>
-
+        <aside>
             <div class="w-full bg-white shadow flex flex-col my-4 p-6">
                 <p class="text-xl font-semibold pb-5">Instagram</p>
                 <div class="grid grid-cols-3 gap-3">
@@ -109,6 +99,7 @@
                     <i class="fab fa-instagram mr-2"></i> Follow @bojanajokicart
                 </a>
             </div>
+        </aside>
     </div>
 
     <footer class="w-full border-t bg-white pb-12">

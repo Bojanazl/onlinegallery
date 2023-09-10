@@ -24,68 +24,35 @@ use App\Http\Controllers\PostController;
 /*Welcome page*/
 Route::get('/', function () {
     return view('pages/welcome');
-});
+})->name('home');
 
-/*Welcome page*/
 Route::get('/welcome', function () {
     return view('pages/welcome');
-});
+})->name('home');
 
 /*Gallery page*/
 Route::get('/paintings', function() {
     return view('pages/paintings');
 });
+
 /*Sculptures page*/
+
 /*Advices page*/
+
 /*Art Blog page*/
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
-
-/*-------Content Manager Routes-------
-
-
-Route::get('/dashboard', function () {
-    return view('/auth/dashboard');
-});
+Route::get('/{post:slug}', [PostController::class, 'show'])->name('view');
 
 
-Route::controller(LoginRegisterController::class)->group(function() {
-    Route::get('/register', 'register')->name('register');
-    Route::post('/store', 'store')->name('store');
-    //Route::get('/login', 'login')->name('login');
-    Route::post('/authenticate', 'authenticate')->name('authenticate');
-    Route::get('/dashboard', 'dashboard')->name('dashboard');
-    Route::post('/logout', 'logout')->name('logout');
-});
 
-Route::controller(ImageGalleryController::class)->group(function() {
-    Route::get('/image-gallery', 'index')->name('image-gallery');
-    Route::post('/image-gallery', 'upload')->name('image-gallery');
-    Route::delete('/image-gallery/{id}', 'destroy')->name('image-gallery');
-});
-
-
-Route::group(['middleware' => ['auth']], function() {
-    Route::resource('roles', RoleController::class);
-    Route::resource('users', UserController::class);
-    Route::resource('categories', CategorieController::class);
-});
-*/
-/*Route::get('/home', [HomeController::class, 'index'])->name('home');*/
 
 Route::controller(UserController::class)->group(function() {
     Route::get('/home', 'index')->name('index');
 });
 
-Route::controller(CategorieController::class)->group(function() {
-    Route::get('/categorie', 'index')->name('index');
-});
-
-Auth::routes();
 
 
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'show']);
 
 Auth::routes();
 
