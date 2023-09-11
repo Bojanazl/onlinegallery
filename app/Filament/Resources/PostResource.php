@@ -51,6 +51,8 @@ class PostResource extends Resource
                         ->schema([
                             Forms\Components\RichEditor::make('body')
                             ->required(),
+                            Forms\Components\TextInput::make('meta_title'),
+                            Forms\Components\TextInput::make('meta_description'),
                             Forms\Components\Toggle::make('active')
                             ->required(),
                             Forms\Components\DatePicker::make('published_at')

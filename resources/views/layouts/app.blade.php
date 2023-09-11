@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BJ Art Blog and Advices</title>
+    <title>{{ $metaTitle ?: 'The Art Blog' }}</title>
+    <meta name="author" content="Bojana Jokic">
     <meta name="description" content="">
 
     <!-- Tailwind -->
