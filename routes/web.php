@@ -1,12 +1,7 @@
 <?php
 
-
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImageGalleryController;
-use App\Http\Controllers\Auth\LoginRegisterController;
-use App\Http\Controllers\PostController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -19,41 +14,18 @@ use App\Http\Controllers\PostController;
 |
 */
 
-/*-------Web Page Routes-------*/
-
-/*Welcome page*/
 Route::get('/', function () {
-    return view('pages/welcome');
-})->name('home');
-
-Route::get('/welcome', function () {
-    return view('pages/welcome');
-})->name('home');
-
-/*Gallery page*/
-Route::get('/paintings', function() {
-    return view('pages/paintings');
+    return view('welcome');
 });
 
-/*Sculptures page*/
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-/*Advices page*/
-
-/*Art Blog page*/
-Route::get('/blog', [PostController::class, 'index'])->name('blog');
-Route::get('/{post:slug}', [PostController::class, 'show'])->name('view');
-
-
-
-
-Route::controller(UserController::class)->group(function() {
-    Route::get('/home', 'index')->name('index');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'show']);
-
-Auth::routes();
-
-
+require __DIR__.'/auth.php';
