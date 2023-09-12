@@ -80,7 +80,6 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('updated_at')
                     ->sortable()
                     ->dateTime(),
-               
             ])
             ->filters([
                 //
@@ -91,7 +90,7 @@ class UserResource extends Resource
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                //Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
