@@ -24,12 +24,5 @@ class CreateUser extends CreateRecord
         return $data;
     }
 
-    protected function handleRecordCreation(array $data): Model
-    {
-        /** @var \App\Models\User $user */
-        $user = parent::handleRecordCreation($data);
-        $user->assignRole('admin');
-
-        return $user;
-    }
+   
 }
