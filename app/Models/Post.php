@@ -20,8 +20,7 @@ class Post extends Model
     'active', 
     'category_id', 
     'published_at', 
-    'meta_title', 
-    'meta_description'];
+    'meta_title'];
 
     protected $casts = [
         'published_at' => 'datetime'
