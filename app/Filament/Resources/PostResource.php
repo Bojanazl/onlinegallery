@@ -22,7 +22,6 @@ class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
     protected static ?string $navigationGroup = 'Content'; //places the page under Content panel
-    protected static ?string $navigationIcon = 'heroicon-o-book-open'; //page icon
 
     public static function form(Form $form): Form
     {

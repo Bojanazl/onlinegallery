@@ -17,12 +17,5 @@ class CreateUser extends CreateRecord
         return $this->getResource()::getUrl('index');
     }
 
-    protected function mutateFormDataBeforeCreate(array $data): array
-    {
-        $data['email_verified_at'] = Carbon::now();
-        $data['password'] = bcrypt($data['password']);
-        return $data;
-    }
-
-   
+  
 }
