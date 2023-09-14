@@ -3,7 +3,8 @@
   <!-- Posts Section -->
   <section class="w-full md:w-2/3 flex flex-col items-center px-3 content-center">
 
- 
+
+
     @foreach($posts as $post)
     <x-post-item :post="$post"></x-post-item>
     @endforeach
@@ -17,7 +18,6 @@
 
       
 
-    
     <!--
     <div class="flex items-center py-8">
         <a href="#" class="h-10 w-10 bg-blue-800 hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center">1</a>

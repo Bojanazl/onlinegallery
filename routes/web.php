@@ -4,6 +4,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
+//Route::get('/blog', function () { return view('blog'); })->name('blog');
 
-Route::get('/welcome', function () {
-    return view('pages/welcome');
-});
+Route::get('/blog', [PostController::class, 'index'])->name('blog');
+
+//Route::get('/blog', [PostController::class, 'show'])->name('blog');
+
+//Route::get('/blog', [PostController::class, 'show'])->name('view');
+
+//Route::get('/welcome', function () { return view('pages/welcome');});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -37,3 +40,4 @@ Route::get('/search', [PostController::class, 'search'])->name('search');
 Route::get('/about-us', [SiteController::class, 'about'])->name('about-us');
 Route::get('/category/{category:slug}', [PostController::class, 'byCategory'])->name('by-category');
 Route::get('/{post:slug}', [PostController::class, 'show'])->name('view');
+
