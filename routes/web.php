@@ -25,7 +25,7 @@ Route::get('/blog', [PostController::class, 'index'])->name('blog');
 
 //Route::get('/blog', [PostController::class, 'show'])->name('view');
 
-//Route::get('/welcome', function () { return view('pages/welcome');});
+Route::get('/welcome', function () { return view('pages/welcome');});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
