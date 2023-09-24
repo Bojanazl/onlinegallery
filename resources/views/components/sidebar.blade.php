@@ -6,5 +6,8 @@
             <a href="#" class="w-full bg-gray-800 text-white font-bold text-sm uppercase rounded hover:bg-green-700 flex items-center justify-center px-2 py-3 mt-4">
                 Read more
             </a>
+            
         </div>
+        <x-sidebar-instagram/>
       </aside>
+

@@ -65,5 +65,7 @@
         </section>
 
         <x-sidebar/>
+        <x-sidebar-instagram/>
+       
     </div>
 </x-app-layout>

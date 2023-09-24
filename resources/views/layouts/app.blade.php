@@ -49,44 +49,31 @@
         </div>
     </nav>
     <!-- Topic Nav -->
+ 
+
     <div class="card bg-transparent">
         <img src="/images/header.png" class="card-img" alt="header image">
         <div class="card-img-overlay">
           <header class="w-full container mx-auto">
             <div class="flex flex-col items-center py-12">
                 <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl " href="#">
-                    Art Blog
+                    {{ \App\Models\TextWidget::getTitle('title') }}
                 </a>
                 <p class="text-lg text-gray-600">
-                    {{ \App\Models\TextWidget::getTitle('header-subtitle') }}
+                    {{ \App\Models\TextWidget::getTitle('header-subtitle') }}              
                 </p>
+
             </div>
         </header>
         </div>
       </div>
+
+
+
     <div class="container mx-auto flex flex-wrap py-6">
 
       {{$slot}}
-
-      <aside>
-        <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p class="text-xl font-semibold pb-5">Instagram</p>
-            <div class="grid grid-cols-3 gap-3">
-                <img class="hover:opacity-75" src="/images/greed.jpg">
-                <img class="hover:opacity-75" src="/images/handsof.jpg">
-                <img class="hover:opacity-75" src="/images/spring.jpg">
-                <img class="hover:opacity-75" src="/images/melting.jpg">
-                <img class="hover:opacity-75" src="/images/overthinking.jpg">
-                <img class="hover:opacity-75" src="/images/socity.jpg">
-                <img class="hover:opacity-75" src="/images/theillusion.jpg">
-                <img class="hover:opacity-75" src="/images/thecreator.jpg">
-                <img class="hover:opacity-75" src="/images/empty.jpg">
-            </div>
-            <a href="https://www.instagram.com/bojanajokicart/" class="w-full bg-gray-800 text-white font-bold text-sm uppercase rounded hover:bg-green-700 flex items-center justify-center px-2 py-3 mt-6">
-                <i class="fab fa-instagram mr-2"></i> Follow @bojanajokicart
-            </a>
-        </div>
-    </aside>
+      
 </div>
 
 <footer class="w-full border-t bg-white pb-12">
