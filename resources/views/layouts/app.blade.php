@@ -29,7 +29,7 @@
 <body class="bg-white font-family-karla">
     <!-- Text Header -->
   
-    <nav class="w-full py-4 border-danger border-t border-bottom-1 bg-gray-500 navbar navbar-default navbar-sticky-top" x-data="{ open: false }">
+    <nav class="w-full py-4 border-danger border-t border-bottom-1 bg-gray-300 navbar-default navbar-sticky-top" x-data="{ open: false }">
         <div class="block sm:hidden">
             <a
                 href="#"

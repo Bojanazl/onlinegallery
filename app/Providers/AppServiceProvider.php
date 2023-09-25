@@ -27,12 +27,12 @@ class AppServiceProvider extends ServiceProvider
                      ->label('Users')
                      ->icon('heroicon-o-users'),
                 NavigationGroup::make()
-                    ->label('Roles and Permissions')
-                    ->icon('heroicon-o-shield-check'),
-                NavigationGroup::make()
                     ->label('Content')
                     ->icon('heroicon-o-book-open')
                     ->collapsed(),
+                NavigationGroup::make()
+                    ->label('Roles and Permissions')
+                    ->icon('heroicon-o-shield-check'),
             ]);
         });
     }
